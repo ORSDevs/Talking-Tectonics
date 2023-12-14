@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFFFF;
+  background-image: url(background.jpg);
+  color: #666666;
+  font-family: Verdana, Arial, sans-serif;
+  margin: 0; 
+  padding: 0; 
+}
+
+#wrapper {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #3B3B98;
+  min-width: 700px;
+  max-width: 1024px;
+  box-shadow: 3px 3px 3px #333;
+}
+
+header {
+  background-color: #000033;
+  color: #FFFFFF;
+  font-family: Georgia, serif;
+}
+
+h1 {
+  line-height: 200%;
+  background-image: url(volcano.jpeg);
+  background-position: right;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  height: 72px;
+  margin-bottom: 0;
+}
+
+nav {
+  font-weight: bold;
+  float: left;
+  width: 160px;
+  padding: 20px 5px 0 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #25CCF7;
+}
+
+nav a:visited {
+  color: #1B9CFC;
+}
+
+nav a:hover {
+  color: #FFFFFF;
+}
+
+main {
+  padding: 1px 20px;
+  background-color: #FFFFFF;
+  margin-left: 170px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h2 {
+  color: #3399CC;
+  font-family: Georgia, serif;
+}
+
+h3 {
+  color: #000033;
+}
+
+table {
+  margin: auto;
+  border: 1px solid #3399cc;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 5px;
+  border: 1px solid #3399cc;
+  text-align: center;
+}
+
+.text {
+  text-align: left;
+}
+
+tr:nth-of-type(even) {
+  background-color: #F5FAFC;
+}
+
+label {
+  float: left;
+  display: block;
+  width: 8em;
+  padding-right: 1em;
+}
+
+input, textarea {
+  display: block;
+  margin-bottom: 1em;
+  width: 100%; 
+}
+
+#mySubmit {
+  margin-left: 10em;
+}
+
+footer {
+  font-size: 0.70em;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  background-color: #FFFFFF;
+  margin-left: 170px;
+}
+
+#calculator {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+#calculator ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#calculator label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#calculator input,
+#calculator button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#result {
+  margin-top: 10px;
+}
+
+main img {
+  width: 45%;
+  margin: 0 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    height: 100%;
+    font-size: 1.5em;
+    padding-left: 0.3em;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.2em;
+    font-size: 1.3em;
+    border-bottom: 1px solid #330000;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    padding: 0.1em 0.6em 0.1em 0.4em;
+  }
+
+  footer {
+    padding: 0;
+  }
+}

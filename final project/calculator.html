@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talking Tectonics</title>
+    <link rel="stylesheet" type="text/css" href="plates.css">
+    <style>
+            header, header img {
+                width: 100%; 
+        }
+    </style>   
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Talking Tectonics</h1>
+            <img src="landscape.jpg" alt="layers photo">
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="What_are_plate_tectonics.html">What are plate tectonics?</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="calculator.html">Tectonics calculator</a></li>
+                <li><a href="Earthquakes.html">Earthquakes and Tsunamis</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="calculator">
+                    <ul>
+                        <label for="birthYear">Please enter your birth year:</label>
+                        <input type="number" id="birthYear">
+                    </ul>
+    
+                    <ul>
+                        <label for="currentYear">Please enter the current year:</label>
+                        <input type="number" id="currentYear">
+                    </ul>
+    
+                    <ul>
+                        <label for="plateEntry">Please enter the tectonic plate you want to know about:</label>
+                        <input type="text" id="plateEntry">
+                    </ul>
+    
+                    <ul>
+                        <button onclick="calculatePlateMovement()">Submit</button>
+                    </ul>
+    
+                    <ul>
+                        <div id="result"></div>
+                    </ul>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Plate Name</th>
+                        <th>Description</th>
+                        <th>Inches moved per year</th>
+                    </tr>
+                    <tr>
+                        <td>North American Plate</td>
+                        <td class="text">The North American Plate is a massive tectonic plate covering North America, parts of the Atlantic Ocean, and Greenland. It moves westward at about 1 inch per year.</td>
+                        <td>1 inch</td>
+
+                    </tr>
+                    <tr>
+                        <td>African Plate</td>
+                        <td class="text">Encompassing Africa, it moves at 2.5 cm per year, influencing the East African Rift and the formation of the Rift Valley.</td>
+                        <td>0.85 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Antarctic Plate"</td>
+                        <td class="text">Dominating the Antarctic region, it moves southward, impacting the Earth's climate and contributing to glacial activity.</td>
+                        <td>0.4 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Eurasian Plate"</td>
+                        <td class="text">Covering Europe and Asia, it moves at a rapid pace, influencing continental collisions, mountain-building, and seismic activity.</td>
+                        <td>3.25 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Indo-Australian Plate</td>
+                        <td class="text">Encompassing the Indian Ocean to Australia, it moves northward, impacting the Himalayas' formation and contributing to earthquakes.</td>
+                        <td>2.2 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Pacific Plate</td>
+                        <td class="text">Spanning the Pacific Ocean, it moves northwest, causing the iconic Ring of Fire with intense volcanic and seismic activity.</td>
+                        <td>2 inches</td>
+                    </tr>
+                    <tr>
+                        <td>South American Plate</td>
+                        <td class="text">Covering South America, it moves westward, impacting the Andes mountain range and contributing to earthquake activity.</td>
+                        <td>1.3 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Scotia Plate</td>
+                        <td class="text">Situated in the Southern Ocean, it moves between the South American and Antarctic Plates, impacting oceanic circulation patterns.</td>
+                        <td>0.87 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Nazca Plate</td>
+                        <td class="text">Along the Pacific Ocean, it moves eastward beneath the South American Plate, causing subduction and forming the Andes.</td>
+                        <td>3.11024 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Cocos Plate</td>
+                        <td class="text">In the eastern Pacific, it subducts beneath the North American Plate, contributing to volcanic activity in Central America.</td>
+                        <td>3.07087 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Caribbean Plate</td>
+                        <td class="text">Covering the Caribbean Sea, it moves eastward, impacting the formation of volcanic islands in the region.</td>
+                        <td>0.87 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Juan de Fuca Plate</td>
+                        <td class="text">Off the western U.S., it subducts beneath the North American Plate, influencing the Cascade Range's volcanic activity.</td>
+                        <td>1.6 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Amurian Plate</td>
+                        <td class="text">In East Asia, it moves northeast, impacting seismic activity and the complex tectonic interactions in the region.</td>
+                        <td>0.393701 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Arabian Plate</td>
+                        <td class="text">Covering the Arabian Peninsula, it moves northward, impacting the formation of the Zagros Mountains and seismic activity.</td>
+                        <td>0.590551 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Burma plate</td>
+                        <td class="text">In Southeast Asia, it moves northward, contributing to the complex tectonic interactions and seismic activity in the region.</td>
+                        <td>1.81102 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Caroline Plate</td>
+                        <td class="text">In the western Pacific, it subducts beneath the Philippine Sea Plate, influencing volcanic arcs and seismic activity.</td>
+                        <td>3.4252 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Okhotsk plate</td>
+                        <td class="text">Near Russia, it moves northwest, impacting the tectonic interactions in the region and contributing to seismic activity.</td>
+                        <td>0.551181 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Philippine Sea Plate</td>
+                        <td class="text">Surrounding the Philippines, it subducts beneath various plates, influencing volcanic arcs and trench systems.</td>
+                        <td>1.88976 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Somali Plate</td>
+                        <td class="text">Covering the Horn of Africa, it moves eastward, impacting the East African Rift and contributing to geological processes.</td>
+                        <td>0.23622 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Sunda plate</td>
+                        <td class="text">in Southeast Asia, it moves northward, influencing the complex tectonic interactions and seismic activity in the region.</td>
+                        <td>0.551181 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Yangtze Plate</td>
+                        <td class="text">In East Asia, it moves northward, contributing to the complex tectonic interactions and seismic activity in the region.</td>
+                        <td>0.590551 inches</td>
+                    </tr>
+                </table>
+
+                <img src="map.jpg" alt="map 1">
+                <img src="map3.jpg" alt="map 2">
+
+            </main>
+    
+            <footer>
+                <a href="mailto:ostanich@ivytech.edu">Olivia Stanich</a>
+            </footer>
+    
+            <script>
+                function calculatePlateMovement() {
+                    var birthYear = parseInt(document.getElementById("birthYear").value);
+                    var currentYear = parseInt(document.getElementById("currentYear").value);
+                    var plateEntry = document.getElementById("plateEntry").value.toLowerCase();
+    
+                    var plateOptions = {
+                        "north american plate": 1,
+                        "african plate": 0.85,
+                        "antarctic tectonic plate": 0.4,
+                        "eurasian tectonic plate": 3.25,
+                        "indo-australian plate": 2.2,
+                        "pacific plate": 2,
+                        "south american plate": 1.3,
+                        "scotia plate": 0.87,
+                        "nazca plate": 3.11024,
+                        "cocos plate": 3.07087,
+                        "caribbean plate": 0.87,
+                        "juan de fuca plate": 1.6,
+                        "amurian plate": 0.393701,
+                        "arabian plate": 0.590551,
+                        "burma plate": 1.81102,
+                        "caroline plate": 3.4252,
+                        "okhotsk plate": 0.551181,
+                        "philippine sea plate": 1.88976,
+                        "somali plate": 0.23622,
+                        "sunda plate": 0.551181,
+                        "yangtze plate": 0.590551
+                    };
+    
+                    var plateSpeed = plateOptions[plateEntry];
+    
+                    if (isNaN(birthYear) || isNaN(currentYear) || isNaN(plateSpeed)) {
+                        alert("Invalid input. Please enter valid numbers and plate name.");
+                        return;
+                    }
+    
+                    var yearsPassed = currentYear - birthYear;
+                    var distanceMoved = yearsPassed * plateSpeed;
+                    var resultText = "The " + plateEntry + " has moved " + distanceMoved.toFixed(2) + " inches.";
+    
+                    document.getElementById("result").innerText = resultText;
+                }
+            </script>
+        </div>
+    </body>
+    
+    </html>
